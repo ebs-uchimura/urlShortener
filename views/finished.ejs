@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>pickadate.js デモ</title>
+    <link rel="stylesheet" href="lib/themes/default.css">
+    <link rel="stylesheet" href="lib/themes/default.date.css">
+    <link rel="stylesheet" href="lib/themes/default.time.css">
+    <style type="text/css">
+    </style>
+  </head>
+  <body>
+  <table border="1" style="border-collapse: collapse">
+  <% if (data) { %>
+    <% for (var i=0;i<data.length;i++){ %>
+      <% for (var j=0;j<time.length;j++){ %>
+          <tr>
+            <td><%= data[i].pre_url %></td>
+            <td><%= time[j] %></td>
+            <td><%= i+1 %></td>
+            <td><a href="<%= data[i][time[j]] %>"><%= data[i][time[j]] %></a>&thinsp;</td>
+          </tr>
+      <% } %>
+    <% } %>
+  <% } else { %>
+    <%= fin %>
+  <% } %>
+</table><br>
+  <% if (fin) { %>
+  <form method="post" action="/download">
+      <input type="submit" value="ダウンロード" />
+  </form><br>
+  <button onclick="history.go(-2)">戻る</button>
+  <% } else { %>
+  <form method="post" action="/csv">
+    <input type="submit" value="csv生成" />
+  </form><br>
+  <button onclick="history.back()">戻る</button>
+  <% } %>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>えびす短縮er</title>
+  <link rel="stylesheet" href="lib/themes/default.css">
+  <link rel="stylesheet" href="lib/themes/default.date.css">
+  <link rel="stylesheet" href="lib/themes/default.time.css">
+  <style type="text/css">
+      textarea {
+        width: 80vw;
+        text-align: left;
+        height: 200px;
+      }
+    </style>
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script src="lib/picker.js"></script>
+  <script src="lib/picker.date.js"></script>
+  <script src="lib/picker.time.js"></script>
+  <script src="lib/legacy.js"></script>
+  <script src="/javascripts/lang-ja.js"></script>
+
+  <script>
+  $(function(){
+    $("#datepicker1").pickadate();
+    $("#timepicker1").pickatime();
+    $("#datepicker2").pickadate();
+    $("#timepicker2").pickatime();
+    $("#datepicker3").pickadate();
+    $("#timepicker3").pickatime();
+    $("#datepicker4").pickadate();
+    $("#timepicker4").pickatime();
+    $("#datepicker5").pickadate();
+    $("#timepicker5").pickatime();
+    $("#datepicker6").pickadate();
+    $("#timepicker6").pickatime();
+    $("#datepicker7").pickadate();
+    $("#timepicker7").pickatime();
+    $("#datepicker8").pickadate();
+    $("#timepicker8").pickatime();
+    $("#datepicker9").pickadate();
+    $("#timepicker9").pickatime();
+    $("#datepicker10").pickadate();
+    $("#timepicker10").pickatime();
+    $("#datepicker11").pickadate();
+    $("#timepicker11").pickatime();
+  });
+</script>
+  <body>
+    <h2>ゑびす短縮er ver.1.0.1</h1>
+    <form method="post" action="/pos_url"> 
+      <label>■ URL貼付（※上限30件）</label><br />
+      <textarea name="pre_url"></textarea><br />
+      <label>■ 日付選択</label><br />
+      <input type="text" name="dt[]" id="datepicker1">
+      <input type="text" name="tt[]" id="timepicker1" value="12:00 PM"><br />
+      <input type="text" name="dt[]" id="datepicker2">
+      <input type="text" name="tt[]" id="timepicker2" value="12:00 PM"><br />
+      <input type="text" name="dt[]" id="datepicker3">
+      <input type="text" name="tt[]" id="timepicker3" value="12:00 PM"><br />
+      <input type="text" name="dt[]" id="datepicker4">
+      <input type="text" name="tt[]" id="timepicker4" value="12:00 PM"><br />
+      <input type="text" name="dt[]" id="datepicker5">
+      <input type="text" name="tt[]" id="timepicker5" value="12:00 PM"><br />
+      <input type="text" name="dt[]" id="datepicker6">
+      <input type="text" name="tt[]" id="timepicker6" value="12:00 PM"><br />
+      <input type="text" name="dt[]" id="datepicker7">
+      <input type="text" name="tt[]" id="timepicker7" value="12:00 PM"><br />
+      <input type="text" name="dt[]" id="datepicker8">
+      <input type="text" name="tt[]" id="timepicker8" value="12:00 PM"><br />
+      <input type="text" name="dt[]" id="datepicker9">
+      <input type="text" name="tt[]" id="timepicker9" value="12:00 PM"><br />
+      <input type="text" name="dt[]" id="datepicker10">
+      <input type="text" name="tt[]" id="timepicker10" value="12:00 PM"><br />
+      <input type="text" name="dt[]" id="datepicker11">
+      <input type="text" name="tt[]" id="timepicker11" value="12:00 PM"><br />
+      <br />
+      <input type="submit" value="送信" />
+    </form>
+  </body>
+</html>
